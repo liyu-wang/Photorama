@@ -6,7 +6,11 @@
 //  Copyright © 2018 Oasis. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum PhotoError: Error {
+    case imageCreationError
+}
 
 enum FlickrError: Error {
     case invalidJSONData

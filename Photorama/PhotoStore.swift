@@ -6,7 +6,12 @@
 //  Copyright © 2018 Oasis. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum ImageResult {
+    case success(UIImage)
+    case failure(Error)
+}
 
 enum PhotoResult {
     case success([Photo])
@@ -27,6 +32,22 @@ class PhotoStore {
         return FlickrAPI.photos(fromJSON: jsonData)
     }
     
+    private func processImageResult(data: Data?, error: Error?) -> ImageResult {
+        guard
+            let imageData = data,
+            let image = UIImage(data: imageData) else {
+                
+                // Couldn't create an image
+                if data == nil {
+                    return .failure(error!)
+                } else {
+                    return .failure(PhotoError.imageCreationError)
+                }
+        }
+        
+        return .success(image)
+    }
+    
     func fetchInterestingPhotos(completion: @escaping (PhotoResult) -> Void) {
         let url = FlickrAPI.interestingPhotoURL
         let request = URLRequest(url: url)
@@ -34,8 +55,26 @@ class PhotoStore {
             (data, response, error) in
             
             let result = self.processPhotosRequest(data: data, error: error)
-            completion(result)
+            OperationQueue.main.addOperation({
+                completion(result)
+            })
         }
+        task.resume()
+    }
+    
+    func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
+        let photoURL = photo.remoteURL
+        let request = URLRequest(url: photoURL)
+        
+        let task = session.dataTask(with: request) {
+            (data, response, error) -> Void in
+            
+            let result = self.processImageResult(data: data, error: error)
+            OperationQueue.main.addOperation({
+                completion(result)
+            })
+        }
+        
         task.resume()
     }
 }
