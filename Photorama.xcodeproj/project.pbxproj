@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0103B7FE211476B800D1DE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B7FD211476B800D1DE85 /* AppDelegate.swift */; };
-		0103B800211476B800D1DE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B7FF211476B800D1DE85 /* ViewController.swift */; };
 		0103B803211476B800D1DE85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0103B801211476B800D1DE85 /* Main.storyboard */; };
 		0103B805211476BA00D1DE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0103B804211476BA00D1DE85 /* Assets.xcassets */; };
 		0103B808211476BA00D1DE85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0103B806211476BA00D1DE85 /* LaunchScreen.storyboard */; };
 		0103B813211476BA00D1DE85 /* PhotoramaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B812211476BA00D1DE85 /* PhotoramaTests.swift */; };
 		0103B81E211476BA00D1DE85 /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B81D211476BA00D1DE85 /* PhotoramaUITests.swift */; };
+		01AC613521147A6B00429851 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC613421147A6B00429851 /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		0103B7FA211476B800D1DE85 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0103B7FD211476B800D1DE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0103B7FF211476B800D1DE85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0103B802211476B800D1DE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0103B804211476BA00D1DE85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0103B807211476BA00D1DE85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		0103B819211476BA00D1DE85 /* PhotoramaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoramaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0103B81D211476BA00D1DE85 /* PhotoramaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaUITests.swift; sourceTree = "<group>"; };
 		0103B81F211476BA00D1DE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01AC613421147A6B00429851 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				0103B7FD211476B800D1DE85 /* AppDelegate.swift */,
-				0103B7FF211476B800D1DE85 /* ViewController.swift */,
+				01AC613421147A6B00429851 /* PhotosViewController.swift */,
 				0103B801211476B800D1DE85 /* Main.storyboard */,
 				0103B804211476BA00D1DE85 /* Assets.xcassets */,
 				0103B806211476BA00D1DE85 /* LaunchScreen.storyboard */,
@@ -256,8 +256,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0103B800211476B800D1DE85 /* ViewController.swift in Sources */,
 				0103B7FE211476B800D1DE85 /* AppDelegate.swift in Sources */,
+				01AC613521147A6B00429851 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,7 +431,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DN3ZSK5H3;
 				INFOPLIST_FILE = Photorama/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +450,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9DN3ZSK5H3;
 				INFOPLIST_FILE = Photorama/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
