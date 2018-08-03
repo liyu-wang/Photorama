@@ -15,6 +15,7 @@
 		0103B81E211476BA00D1DE85 /* PhotoramaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0103B81D211476BA00D1DE85 /* PhotoramaUITests.swift */; };
 		01AC613521147A6B00429851 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC613421147A6B00429851 /* PhotosViewController.swift */; };
 		01AC613721147E6600429851 /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC613621147E6600429851 /* FlickrAPI.swift */; };
+		01AC61392114850000429851 /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AC61382114850000429851 /* PhotoStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0103B81F211476BA00D1DE85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01AC613421147A6B00429851 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		01AC613621147E6600429851 /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
+		01AC61382114850000429851 /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0103B806211476BA00D1DE85 /* LaunchScreen.storyboard */,
 				0103B809211476BA00D1DE85 /* Info.plist */,
 				01AC613621147E6600429851 /* FlickrAPI.swift */,
+				01AC61382114850000429851 /* PhotoStore.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				01AC613721147E6600429851 /* FlickrAPI.swift in Sources */,
 				0103B7FE211476B800D1DE85 /* AppDelegate.swift in Sources */,
+				01AC61392114850000429851 /* PhotoStore.swift in Sources */,
 				01AC613521147A6B00429851 /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
