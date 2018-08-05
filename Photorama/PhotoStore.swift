@@ -67,7 +67,9 @@ class PhotoStore {
     
     func fetchImage(for photo: Photo, completion: @escaping (ImageResult) -> Void) {
         
-        let photoKey = photo.photoID
+        guard let photoKey = photo.photoID else {
+            preconditionFailure("Photo expected to have a photoID.")
+        }
         if let image = imageStore.image(forKey: photoKey) {
             OperationQueue.main.addOperation {
                 completion(.success(image))
@@ -75,8 +77,10 @@ class PhotoStore {
             return
         }
         
-        let photoURL = photo.remoteURL
-        let request = URLRequest(url: photoURL)
+        guard let photoURL = photo.remoteURL else {
+            preconditionFailure("Photo expected to have a remote URL.")
+        }
+        let request = URLRequest(url: photoURL as URL)
         
         let task = session.dataTask(with: request) {
             (data, response, error) -> Void in
